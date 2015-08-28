@@ -1,0 +1,19 @@
+{
+    "name": "nehalvpatel/periscope-downloader",
+    "description": "PHP script to download videos from Periscope",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nehal Patel",
+            "email": "nehal.patel@me.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "nehalvpatel\\": "src/"
+        }
+    }
+}
