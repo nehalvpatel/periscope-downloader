@@ -16,8 +16,6 @@ composer update
 require_once("vendor/autoload.php");
 
 use nehalvpatel\PeriscopeDownloader;
-use Guzzle\Http\Client;
-use Guzzle\Plugin\Cookie\CookieJar\ArrayCookieJar;
 
 $url = "https://www.periscope.tv/w/aLNeFzcxNTU4OTB8MU93eFdqV2JMWG5KUYZyGwCPkFvgC3JUE0AN9NhEjC-hHOCPBg1HCrUoiMxg";
 

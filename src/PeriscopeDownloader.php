@@ -1,5 +1,8 @@
 <?php namespace nehalvpatel;
 
+use Guzzle\Http\Client;
+use Guzzle\Plugin\Cookie\CookieJar\ArrayCookieJar;
+
 class PeriscopeDownloader {
 	private $_guzzle;
 	public function __construct()
