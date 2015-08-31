@@ -1,6 +1,8 @@
 # Periscope Downloader
 PHP script to download videos from Periscope
 
+Ported from [a batch script](https://www.youtube.com/watch?v=9b0O9KDICs0) made by Abnormal Nik
+
 ## Installation
 
 Add the package to your composer file:
