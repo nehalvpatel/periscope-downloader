@@ -18,7 +18,12 @@ class PeriscopeDownloader {
 		else {
 			preg_match("/(.*)watchonperiscope\.com\/broadcast\/(.*)/", trim($url), $output_array);
 			if (isset($output_array[2])) {
-				$watchonperiscope_response = $this->_guzzle->get("https://watchonperiscope.com/api/accessChannel?broadcast_id=" . $output_array[2])->getBody();
+				try {
+					$watchonperiscope_response = $this->_guzzle->get("https://watchonperiscope.com/api/accessChannel?broadcast_id=" . $output_array[2])->getBody();
+				} catch (\GuzzleHttp\Exception\ServerException $e) {
+					throw new \Exception("URL error: Invalid watchonperiscope.com URL", 2);
+				}
+
 				$watchonperiscope_json = json_decode($watchonperiscope_response, true);
 
 				if (!isset($watchonperiscope_json["error"]))
